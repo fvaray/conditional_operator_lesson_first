@@ -108,32 +108,42 @@ public class Main {
         int requiredSeatOrStand = scanner.nextInt();
         if (requiredSeatOrStand == 0)
         {
-            System.out.println("Вам нужны сидячие места, сколько мест вам требуется?, введите число и Enter");
-            int requiredSeatPlaces = scanner.nextInt();
-            if(requiredSeatPlaces < cntFreeSeatPlaces)
+            if (cntFreeSeatPlaces == 0)
             {
-                System.out.printf("Отлично! Сидячие места для вас есть, после вашего бронирования" +
-                        " остается %d сидячих мест \n",  cntFreeSeatPlaces - requiredSeatPlaces);
+                System.out.println("Сидячих мест не осталось");
+
             }
             else
             {
-                System.out.printf("К сожалению, осталось только %d cидячих мест \n", cntFreeSeatPlaces);
+                System.out.println("Вам нужны сидячие места, сколько мест вам требуется?, введите число и Enter");
+                int requiredSeatPlaces = scanner.nextInt();
+                if(requiredSeatPlaces < cntFreeSeatPlaces)
+                {
+                    System.out.printf("Отлично! Сидячие места для вас есть, после вашего бронирования" +
+                            " остается %d сидячих мест \n",  cntFreeSeatPlaces - requiredSeatPlaces);
+                }
+                else {
+                    System.out.printf("К сожалению, осталось только %d cидячих мест \n", cntFreeSeatPlaces);
+
+                }
             }
         }
         else if (requiredSeatOrStand == 1)
         {
-            System.out.println("Вам нужны стоячие места, сколько мест вам требуется?, введите число и Enter");
-            int requiredStandPlaces = scanner.nextInt();
-            if(requiredStandPlaces <= cntFreeStandPlaces)
+            if (cntFreeStandPlaces == 0)
             {
-                System.out.printf("Отлично! Стоячие места для вас есть, после вашего бронирования" +
-                        " остается %d стоячих мест \n",  cntFreeStandPlaces - requiredStandPlaces);
+                System.out.println("Стоячих мест не осталось");
             }
-            else
-            {
-                System.out.printf("К сожалению, осталось только %d стоячих мест \n", cntFreeStandPlaces);
+            else {
+                System.out.println("Вам нужны стоячие места, сколько мест вам требуется?, введите число и Enter");
+                int requiredStandPlaces = scanner.nextInt();
+                if (requiredStandPlaces <= cntFreeStandPlaces) {
+                    System.out.printf("Отлично! Стоячие места для вас есть, после вашего бронирования" +
+                            " остается %d стоячих мест \n", cntFreeStandPlaces - requiredStandPlaces);
+                } else {
+                    System.out.printf("К сожалению, осталось только %d стоячих мест \n", cntFreeStandPlaces);
+                }
             }
-
         }
         else
         {
