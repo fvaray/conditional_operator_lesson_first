@@ -56,7 +56,7 @@ public class Main {
         ageHuman = scanner.nextInt();
         if (ageHuman < 2)
         {
-            System.out.println("ему лучше побыть еще с мамой :).");
+            System.out.println("ему лучше побыть еще с мамой :)");
         }
         else if (ageHuman >= 2 && ageHuman <= 6)
         {
