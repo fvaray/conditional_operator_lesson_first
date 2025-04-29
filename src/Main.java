@@ -8,11 +8,11 @@ public class Main {
 
         System.out.println("Задача 1");
         System.out.println("Сколько лет человеку? Наберите воздаст, нажмите Enter.");
-        int Age = scanner.nextInt();
+        int age = scanner.nextInt();
 
-        if (Age >= 18 ){
+        if (age >= 18 ){
         System.out.println("он совершеннолетний");}
-        else if (Age <= 0){
+        else if (age <= 0){
             System.out.println("либо он младенец, либо еще не родился");        }
         else
         {
@@ -22,12 +22,12 @@ public class Main {
 
         System.out.println("Задача 2");
         System.out.println("Какая температура на улице? Наберите, нажмите Enter.");
-        int Temp = scanner.nextInt();
-        if (Temp < 5)
+        int temp = scanner.nextInt();
+        if (temp < 5)
         {
             System.out.println("На улице холодно, нужно надеть шапку");
         }
-        else if(Temp > 5)
+        else if(temp > 5)
         {
             System.out.println("Сегодня тепло, можно идти без шапки");
         }
@@ -39,8 +39,8 @@ public class Main {
 
         System.out.println("Задача 3");
         System.out.println("Какая была скорость? Наберите и нажмите Enter.");
-        int Speed = scanner.nextInt();
-        if (Speed <= 60)
+        int speed = scanner.nextInt();
+        if (speed <= 60)
         {
             System.out.println("превышения скорости нет, можно ездить спокойно.");
         }
